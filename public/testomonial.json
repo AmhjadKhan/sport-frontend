@@ -1,0 +1,45 @@
+[
+    {
+      "name": "Amit Patel",
+      "photo": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2080&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1562077772-3bd90403f7f0?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "Playing basketball here is always a highlight of my week. Great courts and a friendly community!",
+      "section": "basketball"
+    },
+    {
+      "name": "Sara Khan",
+      "photo": "https://images.unsplash.com/photo-1706885093476-b1e54f3b7496?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1593766787879-e8c78e09cbbe?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "The yoga classes are amazing. They help me relax and recharge after a long day.",
+      "section": "yoga"
+    },
+    {
+      "name": "David Lee",
+      "photo": "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=1978&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1431324155629-1a6deb11948e?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "Soccer here is a blast! The fields are well-maintained, and it’s a great place to meet new players.",
+      "section": "soccer"
+    },
+    {
+      "name": "Emily Johnson",
+      "photo": "https://images.unsplash.com/photo-1552058544-f2b08422138a?q=80&w=1842&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1573451447209-3c02c8f08927?q=80&w=1874&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "Tennis at this club is so much fun. The instructors are patient and help you improve your skills.",
+      "section": "tennis"
+    },
+    {
+      "name": "John Edwards",
+      "photo": "https://images.unsplash.com/photo-1603415526776-5d5b41d82b35?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1596496057775-040063d957d4?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "I love the swimming pool here! It's clean and perfect for both serious swimmers and casual dips.",
+      "section": "swimming"
+    },
+    {
+      "name": "Rebecca Williams",
+      "photo": "https://images.unsplash.com/photo-1573496140150-a4163580d384?q=80&w=2064&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "thumbnail": "https://images.unsplash.com/photo-1505483531331-3b1a2752d001?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "comment": "The running track is excellent! It's my go-to place for daily jogging and keeping fit.",
+      "section": "running"
+    }
+  ]
+  

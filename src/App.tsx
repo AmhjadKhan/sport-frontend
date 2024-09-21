@@ -1,16 +1,14 @@
-
-// import CustomerTestimonials from "../shared/CustomerTestimonials";
-// import WhoCanUse from "../shared/WhoCanUse";
-
 import Hero from "./Components/ui/Hero";
+import Everyone from "./Components/ui/Home/Everyone";
+import Testimonial from "./Components/ui/Home/testomonial/Testomonial";
 
 
 const App = () => {
   return (
     <div>
       <Hero />
-      {/* <WhoCanUse />
-      <CustomerTestimonials /> */}
+      <Everyone />
+      <Testimonial />
     </div>
   );
 };
