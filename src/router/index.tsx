@@ -3,6 +3,7 @@ import App from "../App";
 import MainLayout from "../Components/layout/Mainlayout";
 import Login from "../pages/Loginpage/Login";
 import Register from "../pages/RegisterPage/Register";
+import Notfoundrouter from "../pages/NotfoundRouter/Notfoundrouter";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
   },
   {
     path: "*",
-    // element: <NotFoundRoute />,
+    element: <Notfoundrouter />
   },
 ]);
 

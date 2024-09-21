@@ -1,78 +1,80 @@
 import {
-    FacebookOutlined,
-    InstagramOutlined,
-    TwitterOutlined,
-  } from "@ant-design/icons";
-  import { NavLink } from "react-router-dom";
-  
-  const Footer = () => {
-    const today = new Date().toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    });
-  
-    return (
-      <footer className="py-16 bg-veryDarkBlue">
-        {/* <!-- Footer Flex Container --> */}
-        <div className="container flex flex-col  items-center justify-between mx-auto space-y-16 px-16 md:flex-row md:space-y-0">
-          {/* <!-- Logo/Menu Container --> */}
-          <div className="flex flex-col items-center justify-between space-y-8 text-lg font-light md:flex-row md:space-y-0 md:space-x-8 text-grayishBlue">
-            <NavLink to={"/"}>
-              <div className="flex justify-center items-center gap-2">
-                <img className="size-8" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHgiisJIuJ_CUfcsffeseKZ54iK9MYwgYdsw&s' alt="" />
-                <p className="text-xl font-bold uppercase text-fourth-color dark:text-fourth-color">
-                  {" "}
-                  <span className="text-secondary-color">S</span>
-                  <span className="text-primary-color">F</span> Platform
-                </p>
-              </div>
-            </NavLink>
-  
-            <NavLink to={"/about-us"} className="uppercase hover:text-strongCyan">
-              About Us
-            </NavLink>
-            <NavLink
-              to={"/contact-us"}
-              className="uppercase hover:text-strongCyan"
-            >
-              Contact Us
-            </NavLink>
-            <NavLink
-              to={"/facility-listing"}
-              className="uppercase hover:text-strongCyan"
-            >
-              Facility Listing
-            </NavLink>
-            <NavLink to={"/booking"} className="uppercase hover:text-strongCyan">
-              Booking
-            </NavLink>
-          </div>
-  
-          {/* <!-- Social Container --> */}
-          <div className="flex space-x-10">
-            {/* <img src={facebookIcon} alt="" className="h-6 hover:bg-lime-500 " /> */}
-            <FacebookOutlined
-              className="text-2xl text-white hover:text-lightBlue cursor-pointer transition duration-500"
-              style={{}}
+  FacebookOutlined,
+  InstagramOutlined,
+  TwitterOutlined,
+} from "@ant-design/icons";
+import { NavLink } from "react-router-dom";
+
+const Footer = () => {
+  const today = new Date().toLocaleDateString("en-US", {
+    month: "short",
+    day: "numeric",
+    year: "numeric",
+  });
+
+  return (
+    <footer className="bg-gray-900 text-white py-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0 px-6">
+        {/* Logo and Menu Links */}
+        <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
+          <NavLink to={"/"} className="flex items-center space-x-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHgiisJIuJ_CUfcsffeseKZ54iK9MYwgYdsw&s"
+              alt="Logo"
+              className="h-10"
             />
-            <TwitterOutlined className="text-2xl text-white hover:text-lightBlue cursor-pointer transition duration-500" />
-            <InstagramOutlined className="text-2xl text-white hover:text-lightBlue cursor-pointer transition duration-500" />
-          </div>
+            <p className="text-2xl font-semibold text-lightBlue uppercase">
+              <span className="text-strongCyan">S</span>
+              <span className="text-lightBlue">F</span> Platform
+            </p>
+          </NavLink>
+
+          <NavLink
+            to={"/about-us"}
+            className="uppercase text-gray-400 hover:text-strongCyan transition duration-300"
+          >
+            About Us
+          </NavLink>
+          <NavLink
+            to={"/contact-us"}
+            className="uppercase text-gray-400 hover:text-strongCyan transition duration-300"
+          >
+            Contact Us
+          </NavLink>
+          <NavLink
+            to={"/facility-listing"}
+            className="uppercase text-gray-400 hover:text-strongCyan transition duration-300"
+          >
+            Facility Listing
+          </NavLink>
+          <NavLink
+            to={"/booking"}
+            className="uppercase text-gray-400 hover:text-strongCyan transition duration-300"
+          >
+            Booking
+          </NavLink>
         </div>
-  
-        <div className="container mx-auto text-sm  mt-12 mb-8">
-          <p className="text-center text-grayishBlue">
-            Copyright ©{new Date().getFullYear()} All rights reserved by{" "}
-            <span className="uppercase text-strongCyan">Md Imon Hossain</span>.
-          </p>
-          <p className="text-center text-grayishBlue">
-            Information refreshed on:{" "}
-            <span className="text-lightBlue">{today}</span>{" "}
-          </p>
+
+        {/* Social Icons */}
+        <div className="flex space-x-6">
+          <FacebookOutlined className="text-3xl hover:text-lightBlue cursor-pointer transition duration-300" />
+          <TwitterOutlined className="text-3xl hover:text-lightBlue cursor-pointer transition duration-300" />
+          <InstagramOutlined className="text-3xl hover:text-lightBlue cursor-pointer transition duration-300" />
         </div>
-      </footer>
-    );
-  };
-  
-  export default Footer;
+      </div>
+
+      <div className="container mx-auto text-center mt-10 space-y-2">
+        <p className="text-gray-400">
+          Copyright © {new Date().getFullYear()} All rights reserved by{" "}
+          <span className="uppercase text-strongCyan">Md Imon Hossain</span>.
+        </p>
+        <p className="text-gray-400">
+          Information refreshed on:{" "}
+          <span className="text-lightBlue">{today}</span>
+        </p>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
