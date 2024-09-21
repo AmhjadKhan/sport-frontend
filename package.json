@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.7",
     "antd": "^5.20.6",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
