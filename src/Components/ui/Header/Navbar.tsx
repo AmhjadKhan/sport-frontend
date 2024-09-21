@@ -89,6 +89,13 @@ const Navbar = () => {
               >
                 Booking
               </NavLink>
+              <NavLink to='/login'className="w-full text-center uppercase" > 
+              Login
+            </NavLink>
+            <NavLink to='/register'className="w-full text-center uppercase" > 
+              Register
+            </NavLink>
+            
             </div>
           </div>
 
@@ -149,12 +156,13 @@ const Navbar = () => {
             <NavLink to="/booking" className="w-full text-center uppercase">
               Booking
             </NavLink>
-            <a href="#" className="custom-button w-full">
+           <NavLink to='/login'className="w-full text-center uppercase" > 
               Login
-            </a>
-            <a href="#" className="custom-primary-button w-full">
-              Sign Up
-            </a>
+            </NavLink>
+            <NavLink to='/regiter'className="w-full text-center uppercase" > 
+              Register
+            </NavLink>
+            
 
             <Select
               className="w-full"
