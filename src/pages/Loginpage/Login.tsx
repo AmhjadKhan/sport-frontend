@@ -1,10 +1,41 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
-import { NavLink } from "react-router-dom";
-
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../redux/hooks";
+import { useLoginMutation } from "../../redux/api/auth/authApi";
+import { setToken, setUser } from "../../redux/features/userSlice";
+import { toast } from "react-hot-toast";
 
 const Login = () => {
- 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [login] = useLoginMutation();
+  const dispatch = useAppDispatch();
+  const navigate = useNavigate();
+
+  const onFinish = async (values: any) => {
+    const toastId = toast.loading("Logging in", { duration: 2000 });
+    try {
+      const loginInfo = values;
+
+      const res = await login(loginInfo);
+
+      if (res?.data?.success) {
+        toast.success(res?.data?.message, { id: toastId });
+      }
+      dispatch(setUser(res.data.data));
+      dispatch(setToken(res.data.token));
+      if (res?.data?.success) {
+        navigate(-1);
+      }
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {
+      toast.error("Please input correctly password and email ", {
+        id: toastId,
+        duration: 2000,
+      });
+    }
+  };
 
   return (
     <div className="bg-slate-100 flex justify-center items-center h-screen">
@@ -12,6 +43,7 @@ const Login = () => {
         name="login"
         initialValues={{ remember: true }}
         style={{ minWidth: 400 }}
+        onFinish={onFinish}
         className="bg-white  px-8 pt-12 pb-6 rounded-md"
       >
         <div className="mb-4 text-2xl text-center text-primary-color">
@@ -33,6 +65,8 @@ const Login = () => {
             size="large"
             placeholder="Password"
             visibilityToggle={{
+              visible: passwordVisible,
+              onVisibleChange: setPasswordVisible,
             }}
           />
         </Form.Item>
@@ -46,6 +80,6 @@ const Login = () => {
       </Form>
     </div>
   );
-}
+};
 
 export default Login;

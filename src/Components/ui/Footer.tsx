@@ -66,7 +66,7 @@ const Footer = () => {
       <div className="container mx-auto text-center mt-10 space-y-2">
         <p className="text-gray-400">
           Copyright © {new Date().getFullYear()} All rights reserved by{" "}
-          <span className="uppercase text-strongCyan">Md Imon Hossain</span>.
+          <span className="uppercase text-strongCyan">Md Amjad Hossain</span>.
         </p>
         <p className="text-gray-400">
           Information refreshed on:{" "}

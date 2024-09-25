@@ -4,6 +4,8 @@ import MainLayout from "../Components/layout/Mainlayout";
 import Login from "../pages/Loginpage/Login";
 import Register from "../pages/RegisterPage/Register";
 import Notfoundrouter from "../pages/NotfoundRouter/Notfoundrouter";
+import About from "../pages/aboutus/About";
+import Contactus from "../pages/contact/Contactus";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
            <App />
           </>
         ),
+      },
+      {
+        path: "about-us",
+        element: <About />
+      },
+      {
+        path: "contact-us",
+        element: <Contactus />
       },
     ],
   },

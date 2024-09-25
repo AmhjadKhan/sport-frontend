@@ -1,45 +1,23 @@
-import {
-    BaseQueryApi,
-    BaseQueryFn,
-    createApi,
-    DefinitionType,
-    FetchArgs,
-    fetchBaseQuery,
-  } from "@reduxjs/toolkit/query/react";
-  import { toast } from "react-hot-toast";
-  
-  const baseQuery = fetchBaseQuery({
-    baseUrl: "http://localhost:5000/",
-    credentials: "include",
-  });
-  
-  const baseQueryWithRefreshToken: BaseQueryFn<
-    FetchArgs,
-    BaseQueryApi,
-    DefinitionType
-  > = async (args, api, extraOption): Promise<any> => {
-    let result = await baseQuery(args, api, extraOption);
-    if (result?.error?.status === 404) {
-      toast.error(result?.error?.data?.message);
-    }
-    if (result?.error?.status === 403) {
-      toast.error(result?.error?.data?.message);
-    }
-    if (result?.error?.status === 401) {
-      // send refresh token if timeout token
-      const res = await fetch("http://localhost:5000/api/v1/auth/refresh-token", {
-        method: "POST",
-        credentials: "include",
-      });
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { RootState } from "../store";
+// import { RootState } from "../store";
 
+const baseQuery = fetchBaseQuery({
+  baseUrl: "http://localhost:5000/api",
+  credentials: "include",
+  prepareHeaders: (headers, { getState }) => {
+    const token = (getState() as RootState)?.user?.token;
+    if (token && token) {
+      headers.set("authorization", `Bearer ${token}`);
     }
-  
-    return result;
-  };
-  
-  export const baseApi = createApi({
-    reducerPath: "baseApi",
-    baseQuery: baseQueryWithRefreshToken,
-    tagTypes: ["semester", "courses", "offeredCourse"],
-    endpoints: () => ({}),
-  });
+
+    return headers;
+  },
+});
+
+export const baseApi = createApi({
+  reducerPath: "baseApi",
+  baseQuery: baseQuery,
+  tagTypes: ["facility", "availability", "userBooking"],
+  endpoints: () => ({}),
+});

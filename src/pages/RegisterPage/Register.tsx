@@ -1,15 +1,60 @@
 import { Button, Form, Input } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import { NavLink} from "react-router-dom";
+import { useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
+import { useSignUPMutation } from "../../redux/api/auth/authApi";
+import { toast } from "react-hot-toast";
+import { logout, selectCurrentUser } from "../../redux/features/userSlice";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { FetchBaseQueryError } from "@reduxjs/toolkit/query";
 
 const Register = () => {
- 
+  const [passwordVisible, setPasswordVisible] = useState(false);
+  const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+  const [signUP] = useSignUPMutation();
+  const { user } = useAppSelector(selectCurrentUser);
+  const [userRole, setUserRole] = useState("user");
+  const navigate = useNavigate();
+  const dispatch = useAppDispatch();
+  const onFinish = async (values: any) => {
+    if (user) {
+      setUserRole(user.role);
+    }
+
+    try {
+      const userInfo = { ...values, role: userRole };
+
+      const res = await signUP(userInfo);
+
+      if (res.error) {
+        if ("data" in res.error) {
+          const baseQueryError = res.error as FetchBaseQueryError;
+          const errorMessage =
+            (baseQueryError.data as { message?: string }).message ||
+            "Something went wrong";
+          toast.error(errorMessage);
+        } else {
+          // Handle SerializedError or other types of errors
+          toast.error("An unexpected error occurred");
+        }
+      } else {
+        toast.success("User registered successfully");
+        dispatch(logout());
+        navigate("/login");
+      }
+
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    } catch (err) {
+      toast.error("Something went wrong", { duration: 2000 });
+    }
+  };
   return (
     <div className="bg-slate-100 flex justify-center items-center h-screen">
       <Form
         name="login"
         initialValues={{ remember: true }}
         style={{ minWidth: 400 }}
+        onFinish={onFinish}
         layout="vertical"
         className="bg-white  px-8 pt-12 pb-6 rounded-md"
       >
@@ -59,6 +104,8 @@ const Register = () => {
         >
           <Input.Password
             visibilityToggle={{
+              visible: passwordVisible,
+              onVisibleChange: setPasswordVisible,
             }}
           />
         </Form.Item>
@@ -86,6 +133,8 @@ const Register = () => {
         >
           <Input.Password
             visibilityToggle={{
+              visible: confirmPasswordVisible,
+              onVisibleChange: setConfirmPasswordVisible,
             }}
           />
         </Form.Item>
@@ -99,6 +148,6 @@ const Register = () => {
       </Form>
     </div>
   );
-}
+};
 
 export default Register;
