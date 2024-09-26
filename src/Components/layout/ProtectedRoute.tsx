@@ -5,6 +5,7 @@ import {
 } from "../../redux/features/userSlice";
 import { useAppSelector } from "../../redux/hooks";
 import { Navigate } from "react-router-dom";
+import { verifyToken } from "../../utils/verifyToken";
 
 interface ProtectedRouteProps {
   children: ReactNode; // ReactNode type represents any valid React child
