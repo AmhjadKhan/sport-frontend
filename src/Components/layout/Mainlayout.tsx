@@ -3,7 +3,7 @@ import { FloatButton, Tooltip } from "antd";
 import { ArrowUpOutlined } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import Navbar from "../ui/Header/Navbar";
-import Footer from "../ui/footer";
+import Footer from "../ui/Footer";
 
 const MainLayout = () => {
   const [isVisible, setIsVisible] = useState(false);
