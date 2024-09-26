@@ -8,9 +8,9 @@ import CustomHeader from "../CustomHeader/CustomHeader";
 import { useAppSelector } from "../../../redux/hooks";
 import { useCurrentToken } from "../../../redux/features/userSlice";
 import { verifyToken } from "../../../utils/verifyToken";
-import UserSideBar from "./user/UserSideBar";
+import UserSideBar from "../../userDashboard/UserSideBar";
 import AdminMainContent from "../../../Adminpages/AdminMainContant";
-import UserMainContent from "./user/UserMainContent";
+import UserMainContent from "../../userDashboard/UserMainContent";
 import AdminSidebar from "../../../Adminpages/AdminSidebar";
 
 const Dashboard = () => {
