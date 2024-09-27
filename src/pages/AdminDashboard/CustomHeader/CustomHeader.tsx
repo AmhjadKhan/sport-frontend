@@ -6,7 +6,7 @@ import {
   } from "@ant-design/icons";
   import { Avatar, Dropdown, Flex, MenuProps } from "antd";
   import Search from "antd/es/input/Search";
-  import "./Dashboard.css";
+  import '../Dashboard/Dashboard.css';
   import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
   import { logout, selectCurrentUser } from "../../../redux/features/userSlice";
   import { useNavigate } from "react-router-dom";

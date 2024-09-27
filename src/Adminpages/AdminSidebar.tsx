@@ -1,5 +1,4 @@
 import { Flex, Menu } from "antd";
-import runningIcon from "../../../assets/running.png";
 import { UserOutlined } from "@ant-design/icons";
 
 const AdminSidebar = () => {
@@ -12,7 +11,7 @@ const AdminSidebar = () => {
     <>
       <Flex align="center" justify="center" className="">
         <div className="logo">
-          <img className="size-10" src={runningIcon} alt="" />
+          <img className="size-10" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEePhRmUWrDLQtGEd7EI2AQwg-bDD7xJODg&s" alt="" />
         </div>
       </Flex>
 
