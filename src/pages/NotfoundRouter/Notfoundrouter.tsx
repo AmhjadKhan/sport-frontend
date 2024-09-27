@@ -1,6 +1,5 @@
 import { Button, Result } from "antd";
 import { NavLink } from "react-router-dom";
-import "./Notfoundrouter.css"; 
 
 const Notfoundrouter = () => {
   return (

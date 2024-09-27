@@ -1,12 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { AutoComplete, Input, Pagination, Select } from "antd";
-
 import { useGetAllFacilityQuery } from "../../redux/api/facility/facilityApi";
 import stadium from "../../assets/stadium.jpg";
 import { useNavigate } from "react-router-dom";
 import NoDataFound from "../../Components/ui/NoDataFound";
 import { useEffect, useState } from "react";
-
 import circle from "../../assets/circle.svg";
 import grid from "../../assets/grid.svg";
 import Loading from "../../Components/ui/Loading";
@@ -44,7 +41,6 @@ const FacilityListingTable = () => {
 
   const facilityData: TFacilities[] = facilities?.data || [];
   const navigate = useNavigate();
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [, setTableParams] = useState({
     pagination: {
       current: page,
