@@ -10,6 +10,7 @@ import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 import AdminMainContent from "../Adminpages/AdminMainContant";
 import FacilityListing from "../pages/Facilities/FacilityListing";
 import FacilityDetails from "../pages/Facilities/FacilityDetails";
+import Booking from "../pages/booking/Booking";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,14 @@ const router = createBrowserRouter([
       {
         path: "facility-listing/:id",
         element: <FacilityDetails />
+      },
+      {
+        path: "booking",
+        element: <Booking />
+      },
+      {
+        path: "booking/:id",
+        element: <Booking />
       },
     ],
   },
