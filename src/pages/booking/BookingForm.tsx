@@ -57,7 +57,13 @@ const BookingForm = () => {
       const optionData = { id, date: formattedDate };
       setOptions(optionData);
     } else {
-      toast.warning("please Select Date");
+        toast('plz selecte date', {
+            icon: '⚠️',
+            style: {
+              background: '#ffcc00', 
+              color: '#fff',        
+            },
+          });
     }
   };
 
@@ -81,7 +87,13 @@ const BookingForm = () => {
       }));
       setStartTimeValue(time); // Set the selected time value
     } else {
-      toast.warning("No time selected");
+        toast('no time selected', {
+            icon: '⚠️',
+            style: {
+              background: '#ffcc00', 
+              color: '#fff',        
+            },
+          });
     }
   };
   const onChangeEndTime: TimePickerProps["onChange"] = (time) => {
@@ -91,22 +103,40 @@ const BookingForm = () => {
         ...prev,
         endTime: formattedTime,
       }));
-      setEndTimeValue(time); // Set the selected time value
+      setEndTimeValue(time); 
     } else {
-      toast.warning("No time selected");
+        toast('No time selected', {
+            icon: '⚠️',
+            style: {
+              background: '#ffcc00', 
+              color: '#fff',        
+            },
+          });
     }
   };
 
   const handleProceed = async () => {
     const { startTime, endTime } = timeOptions;
     if (!user) {
-      toast.warning("Please login First for Booking.");
+        toast('plz login booking before', {
+            icon: '⚠️',
+            style: {
+              background: '#ffcc00', 
+              color: '#fff',        
+            },
+          });
       navigate("/login", { replace: true });
     } else if (!startTime || !endTime) {
       toast.error("Please select both start time and end time.");
       return;
     } else if (startTime && endTime && startTime >= endTime) {
-      toast.warning("Start time must be earlier than end time.");
+        toast('plz time must be end conside', {
+            icon: '⚠️',
+            style: {
+              background: '#ffcc00', 
+              color: '#fff',        
+            },
+          });
       return;
     }
     const proceedOptions = {
