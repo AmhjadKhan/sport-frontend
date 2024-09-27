@@ -8,6 +8,8 @@ import About from "../pages/aboutus/About";
 import Contactus from "../pages/contact/Contactus";
 import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
 import AdminMainContent from "../Adminpages/AdminMainContant";
+import FacilityListing from "../pages/Facilities/FacilityListing";
+import FacilityDetails from "../pages/Facilities/FacilityDetails";
 
 const router = createBrowserRouter([
   {
@@ -29,6 +31,14 @@ const router = createBrowserRouter([
       {
         path: "contact-us",
         element: <Contactus />
+      },
+      {
+        path: "facility-listing",
+        element: <FacilityListing />
+      },
+      {
+        path: "facility-listing/:id",
+        element: <FacilityDetails />
       },
     ],
   },

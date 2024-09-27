@@ -1,11 +1,8 @@
 import { AutoComplete, Input, Pagination, Select } from "antd";
 import { useGetAllFacilityQuery } from "../../redux/api/facility/facilityApi";
-import stadium from "../../assets/stadium.jpg";
 import { useNavigate } from "react-router-dom";
 import NoDataFound from "../../Components/ui/NoDataFound";
 import { useEffect, useState } from "react";
-import circle from "../../assets/circle.svg";
-import grid from "../../assets/grid.svg";
 import Loading from "../../Components/ui/Loading";
 import useDebounce from "../../hooks/useDebounce";
 
@@ -145,7 +142,7 @@ const FacilityListingTable = () => {
                 <div className="relative overflow-hidden w-[270px] h-[330px] bg-slate-400 rounded-2xl ">
                   <img
                     className="absolute top-0 left-0 w-full h-full object-cover object-center"
-                    src={item.image ? item.image : stadium}
+                    src={item.image ? item.image : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3LHvpafs849Z1OXXxPq2G2tIACeHc0hU1FQ&s'}
                     alt="member"
                   />
 
@@ -158,12 +155,12 @@ const FacilityListingTable = () => {
                     </p>
                     <img
                       className="absolute -left-10 -bottom-10"
-                      src={circle}
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhRPspGf3xDS2Pfzir_qbh-2m2RxjOyBiWBg&s"
                       alt="circle"
                     />
                     <img
                       className="absolute -right-2 -top-4 w-9"
-                      src={grid}
+                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxMH-p0abKj9zppPzM0a3FnOIitLkVcE6Oww&s"
                       alt="circle"
                     />
                   </div>
