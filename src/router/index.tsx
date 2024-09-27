@@ -11,6 +11,8 @@ import AdminMainContent from "../Adminpages/AdminMainContant";
 import FacilityListing from "../pages/Facilities/FacilityListing";
 import FacilityDetails from "../pages/Facilities/FacilityDetails";
 import Booking from "../pages/booking/Booking";
+import AdminBooking from "../Adminpages/AdminBooking";
+import AdminFacilityManagement from "../Adminpages/AdminFacilityManagement";
 
 const router = createBrowserRouter([
   {
@@ -63,9 +65,18 @@ const router = createBrowserRouter([
           </>
         ),
       },
+
+      {
+        path: "booking",
+        element: <AdminBooking />
+      },
       {
         path: "create-account",
         element: <Register />,
+      },
+      {
+        path: "facility-management",
+        element: <AdminFacilityManagement />
       },
     ],
   },
