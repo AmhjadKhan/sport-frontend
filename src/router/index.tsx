@@ -6,6 +6,8 @@ import Register from "../pages/RegisterPage/Register";
 import Notfoundrouter from "../pages/NotfoundRouter/Notfoundrouter";
 import About from "../pages/aboutus/About";
 import Contactus from "../pages/contact/Contactus";
+import AdminDashboard from "../pages/AdminDashboard/AdminDashboard";
+import AdminMainContent from "../Adminpages/AdminMainContant";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +29,24 @@ const router = createBrowserRouter([
       {
         path: "contact-us",
         element: <Contactus />
+      },
+    ],
+  },
+  {
+    path: "admin/dashboard",
+    element: <AdminDashboard />,
+    children: [
+      {
+        index: true,
+        element: (
+          <>
+            <AdminMainContent />
+          </>
+        ),
+      },
+      {
+        path: "create-account",
+        element: <Register />,
       },
     ],
   },
