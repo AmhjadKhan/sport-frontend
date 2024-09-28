@@ -13,6 +13,8 @@ import FacilityDetails from "../pages/Facilities/FacilityDetails";
 import Booking from "../pages/booking/Booking";
 import AdminBooking from "../Adminpages/AdminBooking";
 import AdminFacilityManagement from "../Adminpages/AdminFacilityManagement";
+import UserDashBoard from "../pages/AdminDashboard/UserDashBoard/UserDashBoard";
+import UserMainContent from "../pages/userDashboard/UserMainContent";
 
 const router = createBrowserRouter([
   {
@@ -65,7 +67,6 @@ const router = createBrowserRouter([
           </>
         ),
       },
-
       {
         path: "booking",
         element: <AdminBooking />
@@ -77,6 +78,20 @@ const router = createBrowserRouter([
       {
         path: "facility-management",
         element: <AdminFacilityManagement />
+      },
+    ],
+  },
+  {
+    path: "user/dashboard",
+    element: <UserDashBoard />,
+    children: [
+      {
+        index: true,
+        element: (
+          <>
+            <UserMainContent />
+          </>
+        ),
       },
     ],
   },
