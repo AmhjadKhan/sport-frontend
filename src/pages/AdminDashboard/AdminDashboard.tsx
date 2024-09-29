@@ -46,12 +46,7 @@ const AdminDashboard = () => {
             <CustomHeader />
           </Header>
           <Content className="content">
-            {/* <Flex gap={"large"}>
-            <MainContent />
-            <SideContent />
-          </Flex> */}
             {userRole && userRole === "admin" && (
-              // <AdminMainContent></AdminMainContent>
               <Outlet />
             )}
           </Content>
