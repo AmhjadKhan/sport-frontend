@@ -15,6 +15,7 @@ import AdminBooking from "../Adminpages/AdminBooking";
 import AdminFacilityManagement from "../Adminpages/AdminFacilityManagement";
 import UserDashBoard from "../pages/AdminDashboard/UserDashBoard/UserDashBoard";
 import UserMainContent from "../pages/userDashboard/UserMainContent";
+import UserBooking from "../pages/userDashboard/UserBooking";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
             <UserMainContent />
           </>
         ),
+      },
+      {
+        path: "my-booking",
+        element: <UserBooking />
       },
     ],
   },

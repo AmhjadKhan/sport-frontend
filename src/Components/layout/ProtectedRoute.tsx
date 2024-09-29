@@ -21,11 +21,6 @@ const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
   if (token) {
     userData = verifyToken(token);
   }
-
-  // if (!userData) {
-  //   return <Navigate to="/login" replace />;
-  // }
-
   const userRole = (userData as { role?: string }).role;
   console.log(userRole);
 
@@ -35,7 +30,6 @@ const ProtectedRoute = ({ children, role }: ProtectedRouteProps) => {
   if (!token) {
     return <Navigate to="/login" replace />;
   }
-
   return children;
 };
 
