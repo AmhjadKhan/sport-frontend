@@ -1,28 +1,26 @@
 const About = () => {
-    return (
-      <div className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-100">
-        <h1 className="text-4xl font-bold mb-6 text-center text-gray-800">About Us</h1>
-        <p className="max-w-2xl text-lg text-gray-600 mb-4 text-center">
-          We are dedicated to providing the best service possible. Our team is committed to
-          excellence and strives to exceed customer expectations. With years of experience in
-          the industry, we understand what it takes to deliver quality results.
-        </p>
-        <p className="max-w-2xl text-lg text-gray-600 text-center">
-          Our mission is to create a positive impact in the community while fostering
-          innovation and growth. We believe in collaboration, integrity, and respect for
-          everyone we work with.
-        </p>
-        <div className="mt-8">
-          <a
-            href="#contact"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300"
-          >
-            Contact Us
-          </a>
-        </div>
+  return (
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-gray-100 px-6 py-12">
+      <h1 className="text-5xl font-extrabold mb-8 text-center text-blue-600">About Us</h1>
+      <p className="max-w-3xl text-xl text-gray-700 mb-6 text-center leading-relaxed">
+        At our core, we are passionate about delivering exceptional service. Our dedicated team
+        consistently goes above and beyond to meet and exceed customer expectations. With a wealth of
+        experience in the industry, we pride ourselves on producing quality outcomes that stand the test of time.
+      </p>
+      <p className="max-w-3xl text-xl text-gray-700 mb-6 text-center leading-relaxed">
+        Our mission is to create meaningful change by promoting innovation and growth. We value collaboration,
+        integrity, and respect in every relationship we build. Join us on our journey to make a positive impact.
+      </p>
+      <div className="mt-10">
+        <a
+          href="#contact"
+          className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
+        >
+          Contact Us
+        </a>
       </div>
-    );
-  };
-  
-  export default About;
-  
+    </div>
+  );
+};
+
+export default About;

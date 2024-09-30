@@ -95,17 +95,11 @@ const FacilityListingTable = () => {
     <div className="dark:bg-slate-500 ">
       <div className="container mx-auto py-16">
         <div className="mb-16">
-          <h3 className="heading-title">Facility Listing Overview</h3>
-          <p className="heading-p px-20">
-            With advanced search and filtering options, players can easily find
-            the perfect venue by name, location, and more. Additionally, the
-            price section is sortable, ensuring that users can quickly compare
-            and choose facilities that suit their budget.
+          <h3 className="text-4xl text-center">Facility Listing Overview</h3>
+          <p className="heading-p text-xl px-20">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nam ipsum, illo vitae quas praesentium, ratione a quasi neque necessitatibus amet sunt dolorem error architecto officiis consequuntur! Enim, sapiente ea! amet sunt dolorem error architecto officiis consequuntur! Enim, sapiente ea!
           </p>
         </div>
-
-        {/* Filter Start */}
-        {/* SearchBar and Filter */}
         <div className="my-8 flex justify-end gap-4">
           <Select
             style={{ height: "40px", width: "250px" }}
@@ -121,8 +115,6 @@ const FacilityListingTable = () => {
               popupMatchSelectWidth={252}
               style={{ width: 300 }}
               onChange={handleSearch}
-
-              // size="large"
             >
               <Input.Search
                 size="large"
@@ -133,8 +125,6 @@ const FacilityListingTable = () => {
             </AutoComplete>
           )}
         </div>
-        {/* Filter End */}
-
         <div>
           <div className="flex flex-row mx-auto flex-wrap justify-center items-center gap-16">
             {facilityData?.map((item: TFacilities, index: number) => (
@@ -155,7 +145,7 @@ const FacilityListingTable = () => {
                     </p>
                     <img
                       className="absolute -left-10 -bottom-10"
-                      src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhRPspGf3xDS2Pfzir_qbh-2m2RxjOyBiWBg&s"
+                      src=""
                       alt="circle"
                     />
                     <img

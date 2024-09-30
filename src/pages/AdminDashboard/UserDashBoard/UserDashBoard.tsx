@@ -45,13 +45,7 @@ const UserDashBoard = () => {
             <CustomHeader />
           </Header>
           <Content className="content">
-            {/* <Flex gap={"large"}>
-            <MainContent />
-            <SideContent />
-          </Flex> */}
-
             {userRole && userRole === "user" && (
-              // <UserMainContent></UserMainContent>
               <Outlet />
             )}
           </Content>
