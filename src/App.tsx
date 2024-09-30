@@ -12,7 +12,6 @@ const App = () => {
         <title>SPORT HOME</title> 
       </Helmet>
       <Toaster />
-      
       <Hero />
       <FeaturedFacilities />
       <Everyone />
