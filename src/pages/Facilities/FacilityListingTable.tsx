@@ -166,7 +166,7 @@ const FacilityListingTable = () => {
 
                 <button
                   onClick={() => navigate(`/facility-listing/${item._id}`)}
-                  className="custom-primary-button mx-auto w-full text-center "
+                  className="btn btn-blue-30 mx-auto w-full text-center bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-transform transform hover:scale-105 duration-300"
                 >
                   View Details
                 </button>

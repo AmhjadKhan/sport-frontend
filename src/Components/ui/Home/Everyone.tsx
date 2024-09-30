@@ -61,8 +61,8 @@ const Everyone = () => {
     <div className="dark:bg-slate-600 bg-slate-50">
       <div className="container mx-auto py-16 px-8">
         <div className="mb-16">
-          <h3 className="heading-title">Who Can Use This Platform?</h3>
-          <p className="heading-p px-20">
+          <h3 className="text-center font-semibold mb-4 text-4xl text-black">Who Can Use This Platform?</h3>
+          <p className="heading-p px-20 text-center text-xl">
             Our platform is open to everyone! Whether you're a sports
             enthusiast, a casual player, or organizing a friendly match, our
             easy-to-use booking system is here to serve your needs. Here's who
