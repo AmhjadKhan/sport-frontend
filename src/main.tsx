@@ -8,8 +8,10 @@ import { store } from './redux/store.ts'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
+    <div className='mx-auto max-w-[1280px]'>
     <Provider store={store}>
     <RouterProvider router={router} />
     </Provider>
+    </div>
   </StrictMode>,
 )
