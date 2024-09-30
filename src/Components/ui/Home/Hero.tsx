@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero: React.FC = () => {
   return (
-    <div className="relative bg-gradient-to-br from-blue-600 to-indigo-800 text-white py-24">
+    <div className="relative bg-gray-500 text-white py-24">
       {/* Background overlay and animated shapes */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-40 h-40 bg-blue-400 rounded-full opacity-30 blur-xl animate-pulse"></div>
