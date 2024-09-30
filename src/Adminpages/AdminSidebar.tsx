@@ -11,7 +11,7 @@ const AdminSidebar = () => {
     <>
       <Flex align="center" justify="center" className="">
         <div className="logo">
-          SPORTS
+          <h1 className="text-2xl font-bold text-black">🤾🏻‍♀️SPORTS</h1>
         </div>
       </Flex>
 

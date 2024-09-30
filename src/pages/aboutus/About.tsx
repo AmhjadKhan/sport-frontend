@@ -1,6 +1,11 @@
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-50 to-gray-100 px-6 py-12">
+      <Helmet>
+        <title>SPORT ABOUT</title>
+      </Helmet>
       <h1 className="text-5xl font-extrabold mb-8 text-center text-blue-600">About Us</h1>
       <p className="max-w-3xl text-xl text-gray-700 mb-6 text-center leading-relaxed">
         At our core, we are passionate about delivering exceptional service. Our dedicated team

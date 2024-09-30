@@ -28,10 +28,9 @@ const UserSideBar = () => {
     <>
       <Flex align="center" justify="center" className="">
         <div className="logo">
-          <img className="size-10" src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzEePhRmUWrDLQtGEd7EI2AQwg-bDD7xJODg&s' alt="" />
+         <h1 className="text-2xl font-bold text-black">🤾🏻‍♀️SPORTS</h1>
         </div>
       </Flex>
-
       <Menu
         onClick={onClick}
         items={itemList.map((item) => ({

@@ -21,12 +21,34 @@ const AdminMainContent = () => {
           </div>
         </div>
         <div className="w-full lg:w-[50%]">
-          <img
-            className="h-80 md:h-96 w-full rounded-md"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQICU9eMdH23S6P-3yzF5WBpZ2P7JknHEmEWQ&s"
-            alt=""
-          />
-        </div>
+  <table className="min-w-full table-auto border-collapse bg-white shadow-md rounded-md">
+    <thead className="bg-gray-200">
+      <tr>
+        <th className="px-6 py-3 text-left text-sm font-bold text-gray-700 uppercase tracking-wider border-b">Action</th>
+        <th className="px-6 py-3 text-left text-sm font-bold text-gray-700 uppercase tracking-wider border-b">Description</th>
+        <th className="px-6 py-3 text-left text-sm font-bold text-gray-700 uppercase tracking-wider border-b">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr className="hover:bg-gray-100">
+        <td className="px-6 py-4 border-b text-sm">Create</td>
+        <td className="px-6 py-4 border-b text-sm">Add a new item to the list</td>
+        <td className="px-6 py-4 border-b text-sm text-green-500">Available</td>
+      </tr>
+      <tr className="hover:bg-gray-100">
+        <td className="px-6 py-4 border-b text-sm">Update</td>
+        <td className="px-6 py-4 border-b text-sm">Edit an existing item</td>
+        <td className="px-6 py-4 border-b text-sm text-yellow-500">In Progress</td>
+      </tr>
+      <tr className="hover:bg-gray-100">
+        <td className="px-6 py-4 border-b text-sm">Delete</td>
+        <td className="px-6 py-4 border-b text-sm">Remove an item from the list</td>
+        <td className="px-6 py-4 border-b text-sm text-red-500">Restricted</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
       </div>
     </div>
   );

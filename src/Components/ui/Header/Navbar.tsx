@@ -61,7 +61,7 @@ const Navbar = () => {
                 {/* <img className="size-8" src={runningIcon} alt="" /> */}
                 <p className="text-xl font-bold uppercase text-third-color dark:text-fourth-color">
                   {" "}
-                  sport
+                  🤾🏻‍♀️sports
                 </p>
               </div>
             </NavLink>

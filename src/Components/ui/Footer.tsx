@@ -18,15 +18,7 @@ const Footer = () => {
         {/* Logo and Menu Links */}
         <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
           <NavLink to={"/"} className="flex items-center space-x-2">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHgiisJIuJ_CUfcsffeseKZ54iK9MYwgYdsw&s"
-              alt="Logo"
-              className="h-10"
-            />
-            <p className="text-2xl font-semibold text-lightBlue uppercase">
-              <span className="text-strongCyan">S</span>
-              <span className="text-lightBlue">F</span> Platform
-            </p>
+            <h1 className="text-2xl font-semibold text-lightBlue uppercase">🤾🏻‍♀️SPORTS</h1>
           </NavLink>
 
           <NavLink

@@ -3,7 +3,7 @@ nav {
   width: 100%;
   top: 0;
   z-index: 50;
-  background-color: rgba(182, 160, 160, 0.9);
+  background-color: rgba(229, 216, 216, 0.9);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }

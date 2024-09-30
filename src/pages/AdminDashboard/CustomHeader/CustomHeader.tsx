@@ -52,7 +52,7 @@ import {
       <Flex align="center" justify="space-between" className="h-full">
         <p className="text-base md:text-xl lg:text-3xl ">
           {" "}
-          Welcome back, {user.name.split(" ")[0]}
+          Welcome {user.name.split(" ")[0]}
         </p>
         <Flex align="center" gap={"3rem"}>
           <div className="md:flex md:justify-center md:items-end hidden">
