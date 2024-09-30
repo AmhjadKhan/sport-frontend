@@ -95,8 +95,8 @@ const FacilityListingTable = () => {
     <div className="dark:bg-slate-500 ">
       <div className="container mx-auto py-16">
         <div className="mb-16">
-          <h3 className="text-4xl text-center">Facility Listing Overview</h3>
-          <p className="heading-p text-xl px-20">
+          <h3 className="text-4xl text-center font-bold mb-8">Facility Listing Overview</h3>
+          <p className="heading-p text-xl px-20 text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, nam ipsum, illo vitae quas praesentium, ratione a quasi neque necessitatibus amet sunt dolorem error architecto officiis consequuntur! Enim, sapiente ea! amet sunt dolorem error architecto officiis consequuntur! Enim, sapiente ea!
           </p>
         </div>
