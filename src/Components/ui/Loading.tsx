@@ -1,13 +1,8 @@
-import { Spin } from "antd";
 const Loading = () => {
   return (
-    <div className="dark:bg-slate-500 bg-slate-50">
-      <div className="container mx-auto py-16">
-        <div className="flex justify-center items-center my-20">
-          <Spin size="large" />
-        </div>
-      </div>
-    </div>
+    <div className="flex justify-center items-center min-h-screen">
+    <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+  </div>
   );
 };
 export default Loading;
